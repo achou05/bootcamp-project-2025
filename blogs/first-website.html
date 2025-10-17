@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Click 6–7 Times for a Surprise</title>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: white;
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+
+      img {
+        width: 250px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+
+      p {
+        font-size: 1.2em;
+        margin-top: 15px;
+        color: #ccc;
+      }
+
+      #counter {
+        font-size: 1em;
+        margin-top: 5px;
+        color: #ff4081;
+      }
+
+      .return-btn {
+        margin-top: 30px;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .return-btn:hover {
+        background-color: #ff4081;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Click 6–7!!!!! Times for a Surprise 👀</h1>
+    <img src="../pictures/images.jpeg" alt="6-7 Click Surprise" id="click-image" />
+    <p>(Go ahead... what could go wrong?)</p>
+    <p id="counter">Clicks: 0</p>
+
+    <script>
+      let clickCount = 0;
+      const image = document.getElementById("click-image");
+      const counterDisplay = document.getElementById("counter");
+
+      // Always start fresh each session (no saved clicks)
+      localStorage.removeItem("clickCount");
+
+      counterDisplay.textContent = `Clicks: ${clickCount}`;
+
+      image.addEventListener("click", () => {
+        clickCount++;
+        counterDisplay.textContent = `Clicks: ${clickCount}`;
+        console.log("Clicks so far:", clickCount);
+
+        if (clickCount === 6) {
+          // RR
+          const win = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+          if (!win) alert("Please allow popups for this site 😈");
+        }
+
+        if (clickCount === 7) {
+          // CR
+          const win = window.open("https://www.youtube.com/watch?v=sayF3h0qICU", "_blank");
+          if (!win) alert("Please allow popups for this site 😈");
+
+          // Reset counter
+          clickCount = 0;
+          counterDisplay.textContent = "Clicks: 0";
+        }
+      });
+
+      // Return button
+      const returnButton = document.createElement("a");
+      returnButton.textContent = "← Return to Blog";
+      returnButton.href = "../blog.html";
+      returnButton.className = "return-btn";
+      document.body.appendChild(returnButton);
+    </script>
+  </body>
+</html>

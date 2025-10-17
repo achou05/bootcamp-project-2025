@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp-project-2025",
+  "version": "1.0.0",
+  "description": "This is a personal website built using the Hack4Impact Starter Pack! <Hello Viewer, My name is Aaron Chou currently a 2nd year at Cal Poly for CPE. I am from Sacramento, California but born in Manassas, Virginia. During my free time I love playing sports, video games, gymming, reading, eating, and sleeping! > [Visit it Here!](https://<achou05>.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achou05/bootcamp-project-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/achou05/bootcamp-project-2025/issues"
+  },
+  "homepage": "https://github.com/achou05/bootcamp-project-2025#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
