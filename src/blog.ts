@@ -14,7 +14,7 @@ const blogs: Blog[] = [
     date: "October 2025",
     description:
       "Open if you dare!!!",
-    image: "./pictures/images.png",
+    image: "pictures/images.png",
     imageAlt: "A photo of the Clash Royale game",
     slug: "first-website",
   },
@@ -23,7 +23,7 @@ const blogs: Blog[] = [
     date: "October 2025",
     description:
       "A reflection on learning TypeScript and DOM manipulation for Milestone 1 of the bootcamp.",
-    image: "./pictures/media.png",
+    image: "pictures/media.png",
     imageAlt: "Code on a laptop screen",
     slug: "learning-typescript",
   },

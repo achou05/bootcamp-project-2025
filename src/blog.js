@@ -1,10 +1,10 @@
-//create through the command npx tsc src/blog.ts (to compile to js)
+// list of the blog posts
 var blogs = [
     {
         title: "Clash Royale",
         date: "October 2025",
         description: "Open if you dare!!!",
-        image: "./pictures/images.png",
+        image: "pictures/images.png",
         imageAlt: "A photo of the Clash Royale game",
         slug: "first-website",
     },
@@ -12,12 +12,14 @@ var blogs = [
         title: "Learning TypeScript",
         date: "October 2025",
         description: "A reflection on learning TypeScript and DOM manipulation for Milestone 1 of the bootcamp.",
-        image: "./pictures/media.png",
+        image: "pictures/media.png",
         imageAlt: "Code on a laptop screen",
         slug: "learning-typescript",
     },
 ];
+// Gets the <div id="blog-container"> from the blog.html file so we know where to insert all the blog posts.
 var blogContainer = document.getElementById("blog-container");
+//Loops through each blog and adds it to the page
 blogs.forEach(function (blog) {
     var blogDiv = document.createElement("div");
     blogDiv.className = "blog-post";
@@ -35,6 +37,7 @@ blogs.forEach(function (blog) {
     var link = document.createElement("a");
     link.href = "blogs/".concat(blog.slug, ".html");
     link.textContent = "Read More →";
+    //append all elements to the blogD 
     blogDiv.appendChild(title);
     blogDiv.appendChild(date);
     blogDiv.appendChild(img);
