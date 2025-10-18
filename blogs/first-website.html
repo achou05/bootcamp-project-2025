@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Click 6–7 Times for a Surprise</title>
+    <!-- This section defines the look and layout for this html webpage.-->
     <style>
       body {
         background-color: #0a0a0a;
@@ -65,23 +66,25 @@
       }
     </style>
   </head>
-
+  <!-- This section creates my structure of the page (title, image, message, and counter)-->
   <body>
     <h1>Click 6–7!!!!! Times for a Surprise 👀</h1>
     <img src="../pictures/images.jpeg" alt="6-7 Click Surprise" id="click-image" />
     <p>(Go ahead... what could go wrong?)</p>
     <p id="counter">Clicks: 0</p>
-
+  <!-- Thie is my script logic that handles the counter and the effect of it-->
     <script>
+      // Start counter at 0 and get page elements
       let clickCount = 0;
       const image = document.getElementById("click-image");
       const counterDisplay = document.getElementById("counter");
 
-      // Always start fresh each session (no saved clicks)
+      // Makes sure no old saved clicks exist
       localStorage.removeItem("clickCount");
 
       counterDisplay.textContent = `Clicks: ${clickCount}`;
 
+      // Function that "listens" for specific event that execute predetermined actions.
       image.addEventListener("click", () => {
         clickCount++;
         counterDisplay.textContent = `Clicks: ${clickCount}`;

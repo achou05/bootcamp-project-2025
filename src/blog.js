@@ -1,3 +1,4 @@
+//create through the command npx tsc src/blog.ts (to compile to js)
 var blogs = [
     {
         title: "Clash Royale",

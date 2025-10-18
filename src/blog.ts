@@ -1,4 +1,4 @@
-
+// this is like a blueprint for what each blog post should contain
 type Blog = {
   title: string;
   date: string;
@@ -7,7 +7,7 @@ type Blog = {
   imageAlt: string;
   slug: string;
 };
-
+// list of the blog posts
 const blogs: Blog[] = [
   {
     title: "Clash Royale",
@@ -28,9 +28,10 @@ const blogs: Blog[] = [
     slug: "learning-typescript",
   },
 ];
-
+// Gets the <div id="blog-container"> from the blog.html file so we know where to insert all the blog posts.
 const blogContainer = document.getElementById("blog-container");
 
+//Loops through each blog and adds it to the page
 blogs.forEach((blog) => {
   const blogDiv = document.createElement("div");
   blogDiv.className = "blog-post";
@@ -54,6 +55,7 @@ blogs.forEach((blog) => {
   link.href = `blogs/${blog.slug}.html`;
   link.textContent = "Read More →";
 
+  //append all elements to the blogD 
   blogDiv.appendChild(title);
   blogDiv.appendChild(date);
   blogDiv.appendChild(img);
